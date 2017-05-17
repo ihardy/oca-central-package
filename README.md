@@ -6,8 +6,8 @@ this repository serves as a reference point for up-to-date versions of the Orbis
 | customization | description | repository |
 |-|-|-|
 | custom actions menu | adds custom actions to the actions menu, including links and the ability to view pnx records | [primo-explore-custom-actions](https://github.com/Alliance-PCJWG/primo-explore-custom-actions) |
-| custom resource icons | adds a set of icons from the noun project to search results. | [primo-explore-custom-actions](https://github.com/Alliance-PCJWG/primo-explore-custom-actions) |
-| worldcat search | appends an option to search WorldCat if there were no search results. | [primo-explore-custom-actions](https://github.com/Alliance-PCJWG/primo-explore-custom-actions) |
+| custom resource icons | adds a set of icons from the noun project to search results. | [primo-explore-resource-icons](https://github.com/Alliance-PCJWG/primo-explore-resource-icons) |
+| worldcat search | appends an option to search WorldCat if there were no search results. | [primo-explore-worldcat-button](https://github.com/Alliance-PCJWG/primo-explore-worldcat-button) |
 
 ## installation
 
