@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  devenv:
+    image: budak/primo-explore-devenv
+    ports:
+      - 8003:8003
+    volumes:
+      - ./src:/home/node/primo-explore-devenv/primo-explore/custom/CENTRAL_PACKAGE
+      - ./test/ALLIANCE:/home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE
+      - ./dist:/home/node/primo-explore-devenv/packages
+    environment:
+      VIEW: ALLIANCE
+      PROXY: http://alliance-primo-sb.hosted.exlibrisgroup.com:80
