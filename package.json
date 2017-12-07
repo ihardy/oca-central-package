@@ -1,6 +1,6 @@
 {
   "name": "oca-central-package",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Orbis Cascade Alliance primo-explore central package.",
   "main": "./src/js/custom.js",
   "dependencies": {},
