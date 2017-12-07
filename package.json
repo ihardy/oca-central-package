@@ -2,19 +2,12 @@
   "name": "oca-central-package",
   "version": "1.0.0",
   "description": "Orbis Cascade Alliance primo-explore central package.",
-  "main": "index.js",
-  "dependencies": {
-    "primo-explore-custom-actions": "^1.0.2",
-    "primo-explore-worldcat-button": "^0.1.1",
-    "primo-explore-resource-icons": "^1.1.0"
-  },
+  "main": "./src/js/custom.js",
+  "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alliance-PCJWG/oca-central-package.git"
+    "url": "git+https://github.com/alliance-pcsg/oca-central-package.git"
   },
   "keywords": [
     "library",
@@ -24,10 +17,15 @@
     "primo-explore",
     "exlibris"
   ],
-  "author": "Nick Budak",
+  "author": "Primo Customization Standing Group",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alliance-PCJWG/oca-central-package/issues"
+    "url": "https://github.com/alliance-pcsg/oca-central-package/issues"
   },
-  "homepage": "https://github.com/Alliance-PCJWG/oca-central-package#readme"
+  "homepage": "https://github.com/alliance-pcsg/oca-central-package#readme",
+  "scripts": {
+    "start": "./bin/run",
+    "create-package": "./bin/package"
+  },
+  "private": true
 }

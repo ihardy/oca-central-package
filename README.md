@@ -1,43 +1,36 @@
-# oca-central-package
-this repository serves as a reference point for up-to-date versions of the Orbis Cascade Alliance Primo central package.
-
-## customizations in the package
+# Orbis Cascade Alliance primo central package
+[![GitHub package version](https://img.shields.io/github/package-json/v/alliance-pcsg/oca-central-package.svg)](https://github.com/alliance-pcsg/oca-central-package)
+## contents
 
 | customization | description | repository |
 |-|-|-|
-| custom actions menu | adds custom actions to the actions menu, including links and the ability to view pnx records | [primo-explore-custom-actions](https://github.com/Alliance-PCJWG/primo-explore-custom-actions) |
-| custom resource icons | adds a set of icons from the noun project to search results. | [primo-explore-resource-icons](https://github.com/Alliance-PCJWG/primo-explore-resource-icons) |
-| worldcat search | appends an option to search WorldCat if there were no search results. | [primo-explore-worldcat-button](https://github.com/Alliance-PCJWG/primo-explore-worldcat-button) |
+| toggle institutions | allows the list of summit borrowing institutions to be collapsed & expanded | [primo-explore-toggle-institutions](https://github.com/alliance-pcsg/primo-explore-custom-actions) |
+<!-- | custom resource icons | adds a set of resource icons from the noun project to search results | [primo-explore-resource-icons](https://github.com/alliance-pcsg/primo-explore-resource-icons) | -->
 
 ## installation
 
-### alliance usage
+download `dist/CENTRAL_PACKAGE.zip`. this file can be uploaded to the Primo Back Office customization manager.
 
-just download CENTRAL_PACKAGE.zip.
+## developing
 
-### non-alliance developers: installing with npm
+**you'll need the latest versions of docker and docker-compose.**
 
-developers who wish to implement the set of customizations contained in this package in their own local view can use `npm`.
+the development environment has two parts:
 
-if you don't have a `package.json` as part of your view code, go to your local package directory (e.g. `/primo-explore/custom/LCC_NEWUI`) and run:
-```sh
-npm init
-```
+- the central package code, located in `src`
+- a generic view package called ALLIANCE, located in `test`
 
-follow the prompts and fill out basic information for your package. then, to install the central package set of customizations:
+here's how to use them:
+1. start a development server with `npm start`.
+2. results will be visible at [http://localhost:8003/primo-explore/search?vid=ALLIANCE](http://localhost:8003/primo-explore/search?vid=ALLIANCE)
+3. you can edit the code in the `src` folder and manually refresh to change the central package.
+4. to test inheritance, you can also edit the code in the `test/ALLIANCE` folder as if you were developing that view. it will automatically refresh.
+5. when finished, you can use `ctrl+c` to quit the dev environment and docker will clean up the container.
 
-```sh
-npm install oca-central-package
-```
+## building
 
-the customizations will be added as dependencies to the central package and their code will appear in your `custom.js`.
-
-please see the pages specific to the individual customizations in the package for their use.
-
-### non-alliance developers: uninstalling with npm
-
-from inside your package directory (e.g. `/primo-explore/custom/LCC_NEWUI`), run:
-
-```sh
-npm uninstall oca-central-package
-```
+when you're finished making changes:
+1. run `npm run create-package` and choose `CENTRAL_PACKAGE` at the prompt.
+2. a `CENTRAL_PACKAGE.zip` file will appear in `dist` (likely overwriting the previous one).
+3. consider [bumping the version number](https://docs.npmjs.com/cli/version) using `npm version`.
+4. if you cut a new release, consider uploading the `CENTRAL_PACKAGE.zip` file as a [build artifact](https://github.com/blog/1547-release-your-software) of the github release.
