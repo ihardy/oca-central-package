@@ -5,6 +5,4 @@
  * customizations with custom values.
  */
 
-app.component('prmAlmaMoreInstAfter', {template: '<toggle-institutions />'})
-
 /************************************* END Config Options ************************************/

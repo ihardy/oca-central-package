@@ -9,4 +9,4 @@ function stop_server {
     exit 0
 }
 
-docker-compose run devenv gulp create-package
+docker-compose run devenv "node_modules/.bin/gulp" create-package

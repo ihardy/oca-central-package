@@ -1,15 +1,22 @@
-version: '3.1'
+version: '3.4'
 
 services:
 
   devenv:
-    image: budak/primo-explore-devenv
+    image: alliance/oca-devenv-docker
     ports:
       - 8003:8003
+      - 3001:3001
     volumes:
-      - ./src:/home/node/primo-explore-devenv/primo-explore/custom/CENTRAL_PACKAGE
-      - ./test/ALLIANCE:/home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE
-      - ./dist:/home/node/primo-explore-devenv/packages
+      - type: bind
+        source: ./src
+        target: /home/node/primo-explore-devenv/primo-explore/custom/CENTRAL_PACKAGE
+      - type: bind
+        source: ./test/ALLIANCE
+        target: /home/node/primo-explore-devenv/primo-explore/custom/ALLIANCE
+      - type: bind
+        source: ./dist
+        target: /home/node/primo-explore-devenv/packages
     environment:
       VIEW: ALLIANCE
       PROXY: http://alliance-primo-sb.hosted.exlibrisgroup.com:80

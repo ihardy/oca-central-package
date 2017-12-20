@@ -3,8 +3,14 @@
   "version": "1.1.0",
   "description": "Orbis Cascade Alliance primo-explore central package.",
   "main": "./src/js/custom.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "primo-explore-toggle-institutions": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alliance-pcsg/oca-central-package.git"
@@ -26,6 +32,5 @@
   "scripts": {
     "start": "./bin/run",
     "create-package": "./bin/package"
-  },
-  "private": true
+  }
 }

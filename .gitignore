@@ -1,4 +1,9 @@
 npm-debug.log
 node_modules
 
-src/ALLIANCE/js/custom.js
+src/js/custom.js
+src/js/modules.js
+
+test/ALLIANCE
+
+dist/*.zip

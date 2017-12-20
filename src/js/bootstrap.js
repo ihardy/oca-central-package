@@ -2,9 +2,9 @@
 
 /*
  * This line must come first, and declares the dependencies of
- * the local package (i.e. which customizations are included).
+ * the central package (i.e. which customizations are included).
  */
 
-var app = angular.module('viewCustom', []);
+angular.module('centralCustom', ['toggleInstitutions']);
 
 /************************************* END Bootstrap Script ************************************/

@@ -1,5 +1,5 @@
 # Orbis Cascade Alliance primo central package
-[![GitHub package version](https://img.shields.io/github/package-json/v/alliance-pcsg/oca-central-package.svg)](https://github.com/alliance-pcsg/oca-central-package)
+[![npm version](https://img.shields.io/npm/v/primo-explore-send-sms.svg)](https://www.npmjs.com/package/primo-explore-send-sms)
 ## contents
 
 | customization | description | repository |
@@ -9,7 +9,7 @@
 
 ## installation
 
-download `dist/CENTRAL_PACKAGE.zip`. this file can be uploaded to the Primo Back Office customization manager.
+see the [releases page for the repository](https://github.com/alliance-pcsg/oca-central-package/releases) to download `CENTRAL_PACKAGE.zip`. this file can be uploaded to the Primo Back Office customization manager.
 
 ## developing
 
@@ -23,9 +23,10 @@ the development environment has two parts:
 here's how to use them:
 1. start a development server with `npm start`.
 2. results will be visible at [http://localhost:8003/primo-explore/search?vid=ALLIANCE](http://localhost:8003/primo-explore/search?vid=ALLIANCE)
-3. you can edit the code in the `src` folder and manually refresh to change the central package.
-4. to test inheritance, you can also edit the code in the `test/ALLIANCE` folder as if you were developing that view. it will automatically refresh.
-5. when finished, you can use `ctrl+c` to quit the dev environment and docker will clean up the container.
+3. you can edit the code in the `src` folder to change the central package and the dev environment will automatically generate `src/js/custom.js`.
+4. if you install customization packages using npm, they will automatically be added to `src/js/custom.js`.
+5. to test inheritance, you can also edit the code in the `test/ALLIANCE` folder as if you were developing that view. it will automatically refresh.
+6. when finished, you can use `ctrl+c` to quit the dev environment and docker will clean up the container.
 
 ## building
 

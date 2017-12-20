@@ -9,4 +9,5 @@ function stop_server {
     exit 0
 }
 
-docker-compose up
+docker-compose up -d
+gulp
